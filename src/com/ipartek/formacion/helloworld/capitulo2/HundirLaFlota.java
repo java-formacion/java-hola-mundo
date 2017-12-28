@@ -4,17 +4,27 @@ import java.util.Scanner;
 
 /**
  * Hundir la flota
+ * 
  * @author java
  *
  */
 public class HundirLaFlota {
+	
 	static String[][] tablero = new String[10][10];
 	static boolean victoria;
 	static int aciertos = 0;
 	static int intentos = 0;
 	static String valorAtaque = "";
+
 	public static void main(String[] args) {
 		arranque();
+		partida();
+		
+	}
+	/**
+	 * Mientra no llegue a los 6 aciertos continua.
+	 */
+	private static void partida() {
 		while (victoria == false) {
 			Scanner sc = new Scanner(System.in);
 			System.out.printf("Posicion a atacar: ");
@@ -27,7 +37,7 @@ public class HundirLaFlota {
 					if (Integer.parseInt(posAtacar) > 99) {
 					} else {
 						tablero[Integer.parseInt("" + posAtacar.charAt(0), 10)][Integer
-								.parseInt("" + posAtacar.charAt(1), 10)] = "oo";
+								.parseInt("" + posAtacar.charAt(1), 10)] = "AA";
 					}
 				}
 				intentos++;
@@ -39,14 +49,19 @@ public class HundirLaFlota {
 			}
 			System.out.println(valorAtaque);
 			System.out.println("Ataques: " + intentos);
+			System.out.println("Aciertos: "+ aciertos +"/6");
 			pintarTablero();
 		}
 		System.out.println("=========");
 		System.out.println("VICTORIA!");
 		System.out.println("=========");
 
+		
 	}
-
+	
+	/**
+	 * Rellena y muestra el tablero
+	 */
 	private static void arranque() {
 		System.out.println("Numero de barcos: 3");
 		System.out.println("Barca (1)");
@@ -56,6 +71,11 @@ public class HundirLaFlota {
 		pintarTablero();
 	}
 
+	/**
+	 * Comprueba si acierta, falla, o la posicion esta repetida.
+	 * @param posAtacar
+	 * @return
+	 */
 	private static boolean comprobarTocado(String posAtacar) {
 		if (tablero[Integer.parseInt("" + posAtacar.charAt(0), 10)][Integer.parseInt("" + posAtacar.charAt(1), 10)]
 				.equals("##") && Integer.parseInt(posAtacar) < 99) {
@@ -80,6 +100,10 @@ public class HundirLaFlota {
 		return false;
 
 	}
+	
+	/**
+	 * Rellenamos el array. Primero con  espacios y luego añadimos los barcos
+	 */
 
 	private static void rellenarArray() {
 		// Rellenamos array con espacios
@@ -100,6 +124,9 @@ public class HundirLaFlota {
 		tablero[5][4] = "##";
 	}
 
+	/**
+	 * Mostramos el tablero.
+	 */
 	private static void pintarTablero() {
 		String ejeXNumeros = "  ";
 		for (int i = 0; i < tablero.length; i++) {
