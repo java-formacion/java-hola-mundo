@@ -22,7 +22,8 @@ public class HundirFlota {
 		
 		fila =  (int) (Math.random()* 10);
 		col = (int) (Math.random()*10);
-		dir = (int) (Math.random()*4)+1;
+		//dir = (int) (Math.random()*4)+1;
+		dir = 4;
 		tam = (int) (Math.random()*4)+1;
 		crearBarco(fila, col, tam, dir);
 		
@@ -36,6 +37,8 @@ public class HundirFlota {
 //		
 //		totalAciertos += tam;
 		
+		//mostrarTableroBarcos();
+		
 		// Crear el tablero
 		crearTablero();
 		
@@ -45,36 +48,43 @@ public class HundirFlota {
 	}
 	
 	static void crearBarco(int fila, int col, int tam, int dir) {
+		String dirText = "";
+		
 		posBarcos[fila][col] = "X";
 		
 		switch(dir) {
 			case 1:
 				// Derecha
-				for(int i = 0; i < tam-1; i++) {
-					posBarcos[fila][col+1] = "X";
+				for(int i = (col + 1); i < (tam + col); i++) {
+					posBarcos[fila][i] = "X";
 				}
+				dirText = "Derecha";
 			break;
 			case 2:
 				// Izquierda
-				for(int i = 0; i < tam-1; i++) {
-					posBarcos[fila][col-1] = "X";
+				for(int i = (col - 1); i > (col - tam); i--) {
+					System.out.println(i);
+					posBarcos[fila][i] = "X";
 				}
+				dirText = "Izquierda";
 			break;
 			case 3:
 				// Arriba
-				for(int i = 0; i < tam-1; i++) {
-					posBarcos[fila-1][col] = "X";
+				for(int i = (fila - 1); i > (fila - tam); i--) {
+					posBarcos[i][col] = "X";
 				}
+				dirText = "Arriba";
 			break;
 			case 4:
 				// Abajo
-				for(int i = 0; i < tam-1; i++) {
-					posBarcos[fila+1][col+1] = "X";
+				for(int i = (fila + 1); i < (tam + fila); i++) {
+					posBarcos[i][col] = "X";
 				}
+				dirText = "Abajo";
 			break;
 		}
 		
-		System.out.println("Barco: " + fila + ", " + col + ", Tamaño: " + tam + ", Dir: " + dir);
+		System.out.println("Barco: " + fila + ", " + col + ", Tamaño: " + tam + ", Dir: " + dirText);
 		
 	}
 
@@ -96,6 +106,22 @@ public class HundirFlota {
 			System.out.print(i + " |");
 			for (int j = 0; j < tablero[i].length; j++) { // Columnas
 				System.out.print(tablero[i][j] + " | ");
+			}
+			System.out.print("\n");
+		}
+		System.out.print("   ------------------------------------------------");
+	}
+	
+	static void mostrarTableroBarcos() {
+		
+		System.out.print("\n");
+		System.out.println("    0    1    2    3    4    5    6    7    8    9  ");
+		System.out.print("   ------------------------------------------------");
+		System.out.print("\n");
+		for (int i = 0; i < posBarcos.length; i++) { // Filas
+			System.out.print(i + " |");
+			for (int j = 0; j < posBarcos[i].length; j++) { // Columnas
+				System.out.print(posBarcos[i][j] + " | ");
 			}
 			System.out.print("\n");
 		}
