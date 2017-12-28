@@ -1,5 +1,5 @@
 package herenciaPaquetes;
 
-public class canario {
+public class canario extends ave{
 
 }
