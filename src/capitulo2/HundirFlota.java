@@ -16,8 +16,7 @@ public class HundirFlota {
 		System.out.println("¿Seras capaz?");
 		System.out.println("");
 		System.out.println("");
-		iniciarMapaCerrado();
-		mostrarTableroCerrado();
+		
 		comenzarPartida();
 		
 	}
@@ -32,48 +31,9 @@ public class HundirFlota {
 	
 	
 	
-	/**
-	 * funcion para mostrar en pantalla la matriz
-	 * 
-	 */
-	static void mostrarTableroCerrado() {
-
-		for (int x = 0; x < mapaCerrado.length; x++) {
-
-			for (int y = 0; y < mapaCerrado[x].length; y++) {
-
-				if (y==0) {
-					System.out.print(x+"     " + mapaCerrado[x][y] + " ");
-				}
-				else System.out.print("     " + mapaCerrado[x][y] + " ");
-			}
-			System.out.println("");
-			System.out.println("   ----------------------------------");
-		}
-
-	}
 	
-	/**
-	 * Metodo para resetear el tablero del juego<br>
-	 * Recorre toda la matriz para Poner todos los valores de la matriz en ?
-	 * 
-	 * @return String[][]
-	 */
 	
-	static String[][] iniciarMapaCerrado() {
-
-		for (int x = 0; x < mapaCerrado.length; x++) {
-
-			for (int y = 0; y < mapaCerrado[x].length; y++) {
-
-				mapaCerrado[x][y] = "?";
-			}
-
-		}
-
-		return mapaCerrado;
-
-	}
+	
 	
 	
 	/**
@@ -83,28 +43,13 @@ public class HundirFlota {
 	
 	static void comenzarPartida() {
 		
+		iniciarMapaCerrado();
+		mostrarTableroCerrado();
 		ponerBarcos();
 		disparo();
 	}
 
-	/**
-	 * Metodo para colocar los barcos en el tablero primero llamamos a la funcion
-	 * resetearAgua() para que nos coloque todos los valores en A y despues
-	 * colocamos los barcos Devuelve matriz con el agua y los barcos colocados
-	 * 
-	 * @return String[][]
-	 */
-	static String[][] ponerBarcos() {
-
-		resetearAgua();
-		mapa[0][4] = "B";
-		mapa[0][3] = "B";
-		mapa[2][1] = "B";
-		mapa[2][0] = "B";
-
-		return mapa;
-
-	}
+	
 	
 	/**
 	 * Funcion para jugar, pide al usuario 2 valores para ver donde dispara<br>
@@ -249,5 +194,70 @@ public class HundirFlota {
 		return mapa;
 
 	}
+	
+	/**
+	 * Metodo para colocar los barcos en el tablero primero llamamos a la funcion
+	 * resetearAgua() para que nos coloque todos los valores en A y despues
+	 * colocamos los barcos Devuelve matriz con el agua y los barcos colocados
+	 * 
+	 * @return String[][]
+	 */
+	static String[][] ponerBarcos() {
+
+		resetearAgua();
+		mapa[0][4] = "B";
+		mapa[0][3] = "B";
+		mapa[2][1] = "B";
+		mapa[2][0] = "B";
+
+		return mapa;
+
+	}
+	
+	
+	/**
+	 * funcion para mostrar en pantalla la matriz
+	 * 
+	 */
+	static void mostrarTableroCerrado() {
+
+		for (int x = 0; x < mapaCerrado.length; x++) {
+
+			for (int y = 0; y < mapaCerrado[x].length; y++) {
+
+				if (y==0) {
+					System.out.print(x+"     " + mapaCerrado[x][y] + " ");
+				}
+				else System.out.print("     " + mapaCerrado[x][y] + " ");
+			}
+			System.out.println("");
+			System.out.println("   ----------------------------------");
+		}
+
+	}
+	
+	/**
+	 * Metodo para resetear el tablero del juego<br>
+	 * Recorre toda la matriz para Poner todos los valores de la matriz en ?
+	 * 
+	 * @return String[][]
+	 */
+	
+	static String[][] iniciarMapaCerrado() {
+
+		for (int x = 0; x < mapaCerrado.length; x++) {
+
+			for (int y = 0; y < mapaCerrado[x].length; y++) {
+
+				mapaCerrado[x][y] = "?";
+			}
+
+		}
+
+		return mapaCerrado;
+
+	}
+	
+	
 
 }
