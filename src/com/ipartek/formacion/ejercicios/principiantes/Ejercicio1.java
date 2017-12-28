@@ -1,21 +1,29 @@
 package com.ipartek.formacion.ejercicios.principiantes;
 
 /**
- * Escribe un programa Java que realice lo siguiente: declarar una variable N de
- * tipo int, una variable A de tipo double y una variable C de tipo char y
- * asigna a cada una un valor. A continuaciÃ³n muestra por pantalla: El valor de
- * cada variable. La suma de N + A La diferencia de A - N El valor numÃ©rico
- * correspondiente al carÃ¡cter que contiene la variable C. Si por ejemplo le
- * hemos dado a N el valor 5, a A el valor 4.56 y a C el valor â€˜aâ€™, se debe
- * mostrar por pantalla:
+ * Programa java que realice lo siguiente: declarar una variable N de tipo int,
+ * una variable A de tipo double y una variable C de tipo char y asigna a cada
+ * un un valor. A continuación muestra por pantalla: El valor de cada variable,
+ * la suma de N + A, la diferencia de A - N, el valor numérico correspondiente
+ * al carácter que contiene la variable C.
  * 
- * @author ur00
+ * @author Eder
  *
  */
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		int n = 5;
+		double a = 4.56;
+		char c = 'a';
+
+		System.out.println("La variable n tiene el valor: " + n);
+		System.out.println("La variable a tiene el valor: " + a);
+		System.out.println("La variable c tiene el caracter: " + c);
+
+		System.out.println("La suma de n+a es: " + (n + a));
+		System.out.println("La resta de a-n es: " + (a - n));
+		System.out.println("El valor numerico del caracter " + c + " es: " + (int) c);
 
 	}
 
