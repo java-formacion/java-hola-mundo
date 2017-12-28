@@ -141,7 +141,7 @@ public class HundirFlota {
 	static boolean correcto(int a, int b) {
 
 		if (a < 0 || a > 4 || b < 0 || b > 4) {
-			System.out.println("El numero tiene que ser entre 0 y 4 incluidos");
+			System.out.println("ERROR!!! El numero tiene que ser entre 0 y 4 incluidos");
 			return false;
 		}
 
