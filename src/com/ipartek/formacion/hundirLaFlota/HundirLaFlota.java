@@ -23,8 +23,9 @@ public class HundirLaFlota {
 		for (int i = 0; i < tablero.length; i++) {
 			for (int j = 0; j < tablero.length; j++) {
 				tablero[i][j] = "A";
-				//System.out.println(tablero[i][j]);
+				System.out.print(tablero[i][j] + " ");
 			}
+			System.out.println();
 		}
 
 	}
