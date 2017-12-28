@@ -9,6 +9,7 @@ package com.ipartek.formacion.helloworld.capitulo2;
  */
 public class AmbitoVaribales {
 
+	// probando otro 
 	// accesible desde cualquier parte de esta Clase
 	static int variableClaseGlobal = 89;
 
