@@ -42,7 +42,10 @@ public class HundirFlota {
 
 			for (int y = 0; y < mapaCerrado[x].length; y++) {
 
-				System.out.print("     " + mapaCerrado[x][y] + " ");
+				if (y==0) {
+					System.out.print(x+"     " + mapaCerrado[x][y] + " ");
+				}
+				else System.out.print("     " + mapaCerrado[x][y] + " ");
 			}
 			System.out.println("");
 			System.out.println("   ----------------------------------");
@@ -213,7 +216,11 @@ public class HundirFlota {
 
 			for (int y = 0; y < mapa[x].length; y++) {
 
-				System.out.print("     " + mapa[x][y] + " ");
+				if (y==0) {
+					System.out.print(x+"     " + mapa[x][y] + " ");
+				}
+				else System.out.print("     " + mapa[x][y] + " ");
+			
 			}
 			System.out.println("");
 			System.out.println("   ----------------------------------");
