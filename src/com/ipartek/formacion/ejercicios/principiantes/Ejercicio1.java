@@ -13,10 +13,32 @@ package com.ipartek.formacion.ejercicios.principiantes;
  *
  */
 public class Ejercicio1 {
+	
+	static int diferencia(int operador1, double operador2) {
+		return (int) (operador2-operador1);
+	}
+
+	static int suma(int operador1, double operador2) {
+		
+		return (int) (operador1+operador2);
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		int n = 5;
+		double a = 4.56;
+		char c = ('a');
+		
+		suma(n,a);
+		diferencia(n,a);
+		
+		System.out.println("el resultado de la variable 1 es:"+n);
+		System.out.println("el resultado de la variable 2 es:"+a);
+		System.out.println("el resultado de las variable 3 es:"+c);
+		
+		System.out.println("la suma es: "+(n+a));
+		System.out.println("la diferencia es: "+ (a-n));
+		
+		
 	}
 
 }
