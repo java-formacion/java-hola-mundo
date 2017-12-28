@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class HundirLaFlota {
 	static String[][] tablero = new String[10][10];
 	static boolean victoria;
-	static int golpes = 0;
+	static int aciertos = 0;
 	static int intentos = 0;
 	static String valorAtaque = "";
 	public static void main(String[] args) {
@@ -60,8 +60,8 @@ public class HundirLaFlota {
 		if (tablero[Integer.parseInt("" + posAtacar.charAt(0), 10)][Integer.parseInt("" + posAtacar.charAt(1), 10)]
 				.equals("##") && Integer.parseInt(posAtacar) < 99) {
 			valorAtaque = "TOCADO!";
-			golpes++;
-			if (golpes == 6)
+			aciertos++;
+			if (aciertos == 6)
 				victoria = true;
 			return true;
 		}
