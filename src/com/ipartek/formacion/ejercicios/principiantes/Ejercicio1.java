@@ -12,6 +12,9 @@ package com.ipartek.formacion.ejercicios.principiantes;
  * @author ur00
  *
  */
+
+
+
 public class Ejercicio1 {
 
 	public static void main(String[] args) {
