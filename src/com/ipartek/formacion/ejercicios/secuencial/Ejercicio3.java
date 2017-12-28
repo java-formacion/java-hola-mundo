@@ -1,5 +1,7 @@
 package com.ipartek.formacion.ejercicios.secuencial;
 
+import java.util.Scanner;
+
 /**
  * 
  * Escribe un programa Java que lee un número entero por teclado y obtiene y
@@ -10,7 +12,9 @@ package com.ipartek.formacion.ejercicios.secuencial;
 public class Ejercicio3 {
 
 	public static void main(String[] args) {
-
+		
+		Scanner sc=new Scanner (System.in);
+		
 	}
 
 }
