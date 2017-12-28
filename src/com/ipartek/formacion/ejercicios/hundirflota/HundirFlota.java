@@ -1,7 +1,5 @@
 package com.ipartek.formacion.ejercicios.hundirflota;
 
-// Prueba commit
-
 import java.util.Scanner;
 
 public class HundirFlota {
@@ -35,10 +33,8 @@ public class HundirFlota {
 //		dir = (int) (Math.random()*4)+1;
 //		tam = (int) (Math.random()*3)+1;
 //		crearBarco(fila, col, tam, dir);
-		
-		//totalAciertos += tam;
-		
-		System.out.println(totalAciertos);
+//		
+//		totalAciertos += tam;
 		
 		// Crear el tablero
 		crearTablero();
@@ -85,22 +81,25 @@ public class HundirFlota {
 	static void crearTablero() {
 		for (int x = 0; x < tablero.length; x++) {
 			for (int y = 0; y < tablero[x].length; y++) {
-				tablero[x][y] = "O";
+				tablero[x][y] = " O";
 			}
 		}
 	}
 
 	static void mostrarTablero() {
-		System.out.print("----------------------------------------");
+		
+		System.out.print("\n");
+		System.out.println("    0    1    2    3    4    5    6    7    8    9  ");
+		System.out.print("   ------------------------------------------------");
 		System.out.print("\n");
 		for (int i = 0; i < tablero.length; i++) { // Filas
-			System.out.print("|");
+			System.out.print(i + " |");
 			for (int j = 0; j < tablero[i].length; j++) { // Columnas
 				System.out.print(tablero[i][j] + " | ");
 			}
 			System.out.print("\n");
 		}
-		System.out.print("----------------------------------------");
+		System.out.print("   ------------------------------------------------");
 	}
 	
 	static void jugar() {
@@ -125,12 +124,12 @@ public class HundirFlota {
 		
 		if(posBarcos[x][y] == "X") {
 			System.out.println("Tocado!");
-			tablero[x][y] = "X";
+			tablero[x][y] = " X";
 			aciertos ++;
 		}
 		else {
 			System.out.println("Agua!");
-			tablero[x][y] = "A";
+			tablero[x][y] = " A";
 		}
 		
 		intentos --;
@@ -140,21 +139,36 @@ public class HundirFlota {
 	static void checkGameState() {
 		if(intentos == 0) {
 			terminado = true;
-			System.out.println("¡GAME OVER!");
+			System.out.println("\n\n¡GAME OVER!");
 		}
 		else if(totalAciertos == aciertos) {
 			terminado = true;
-			System.out.println("¡Felicidades! Has ganado!!!");
+			System.out.println("\n\n¡Felicidades! Has ganado!!!");
 		}
 		else {
+			System.out.println("\nTe quedan: " + intentos + " intentos");
 			jugar();
+		}
+		
+		if(terminado) {
+			Scanner sc = new Scanner(System.in);
+			
+			System.out.println("\nJugar otra vez S/N: ");
+			String res = sc.nextLine();
+			
+			if(res.equalsIgnoreCase("S")) {
+				nuevaPartida();
+			}
+			else {
+				System.out.println("Una pena... hasta otra!");
+			}
+			
+			sc.close();
 		}
 	}
 
 	public static void main(String[] args) {
-		
 		nuevaPartida();
-
 	}
 
 }
