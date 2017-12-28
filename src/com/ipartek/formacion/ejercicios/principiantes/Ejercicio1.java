@@ -5,7 +5,7 @@ package com.ipartek.formacion.ejercicios.principiantes;
  * tipo int, una variable A de tipo double y una variable C de tipo char y
  * asigna a cada una un valor. A continuación muestra por pantalla: El valor de
  * cada variable. La suma de N + A La diferencia de A - N El valor numérico
- * correspondiente al carácter que contiene la variable C. Si por ejemplo le
+ * correspondiente al carácter que contiene -nla variable C. Si por ejemplo le
  * hemos dado a N el valor 5, a A el valor 4.56 y a C el valor ‘a’, se debe
  * mostrar por pantalla:
  * 
@@ -13,9 +13,20 @@ package com.ipartek.formacion.ejercicios.principiantes;
  *
  */
 public class Ejercicio1 {
-
+	
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		int n = 2;
+		double a = 2.2;
+		char c = 'a';
+		
+		System.out.println("Variable a: " + n);
+		System.out.println("Variable b: " + a);
+		System.out.println("Variable c: " + c);
+		
+		System.out.println("n+a: " + (n+a));
+		System.out.println("a-n: " + (a-n));
+		System.out.println("Valor numerico c: " + (int) c);
 
 	}
 
