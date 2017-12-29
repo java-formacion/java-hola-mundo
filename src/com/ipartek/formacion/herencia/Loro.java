@@ -22,13 +22,12 @@ public class Loro extends Ave {
 			System.out.println("Norte");
 		} else if (region == 'S') {
 			System.out.println("Sur");
-
 		} else if (region == 'E') {
 			System.out.println("Este");
 		} else {
 			System.out.println("Oeste");
 		}
-		
+
 	}
 
 }

@@ -16,7 +16,6 @@ public class Ave {
 	}
 
 	public void quienSoy() {
-
 		System.out.println("Mi sexo es " + sexo);
 		System.out.println("Mi edad es " + edad);
 	}
