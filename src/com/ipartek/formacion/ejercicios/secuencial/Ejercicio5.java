@@ -1,8 +1,6 @@
 package com.ipartek.formacion.ejercicios.secuencial;
 
 import java.util.Scanner;
-import java.math.PI;
-import java.math.pow;
 
 /**
  * 
