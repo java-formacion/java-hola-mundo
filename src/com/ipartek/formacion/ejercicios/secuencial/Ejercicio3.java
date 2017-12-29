@@ -12,9 +12,14 @@ import java.util.Scanner;
 public class Ejercicio3 {
 
 	public static void main(String[] args) {
-		
-		Scanner sc=new Scanner (System.in);
-		
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Escribe un numero: ");
+		int numero = sc.nextInt();
+		System.out.println("El numero que has escrito es: " + numero);
+		System.out.println("El doble de " + numero + " es: " + (numero * 2));
+		System.out.println("El triple de " + numero + " es: " + (numero * 3));
+
 	}
 
 }
