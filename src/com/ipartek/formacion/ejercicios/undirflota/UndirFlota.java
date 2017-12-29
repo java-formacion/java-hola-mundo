@@ -8,21 +8,24 @@ public class UndirFlota {
 	static int intentos = 7;
 	static int posicionY = 0;
 	static int posicionX = 0;
+	static boolean error = true;
 	static Scanner sc;
 	public static void main(String[] args) {
 
 		inicializar();
 		// pintarTerreno();
-		while (intentos > 0 | posicion[1][1] == 1 | posicion[1][2] == 1 | posicion[1][3] == 1 | posicion[2][0] == 1
-				| posicion[3][0] == 1 | posicion[4][0] == 1) {
+		while (intentos > 0 & (posicion[1][1] == 1 | posicion[1][2] == 1 | posicion[1][3] == 1 | posicion[2][0] == 1
+				| posicion[3][0] == 1 | posicion[4][0] == 1)) {
 			pedirPosicion();
 		}
+
 		if (intentos == 0) {
 			System.out.println("Has perdido");
 			pintarTerreno();
 		} else if (posicion[1][1] == 3 & posicion[1][2] == 3 & posicion[1][3] == 3 & posicion[2][0] == 3
 				& posicion[3][0] == 3 & posicion[4][0] == 3) {
 			System.out.println("Has ganado!!!");
+			pintarTerreno();
 		}
 	}
 
@@ -31,8 +34,8 @@ public class UndirFlota {
 		posicionY = 0;
 		posicionX = 0;
 
-		if (leerPorPantalla()==true) {
-			
+		if (leerPorPantalla() == true) {
+
 			switch (posicion[posicionX][posicionY]) {
 			case 0:
 				LimpiarPantalla();
@@ -63,47 +66,55 @@ public class UndirFlota {
 				break;
 			}
 		}
+		sc.remove();
 
 	}
 
 	private static boolean leerPorPantalla() {
-		boolean error = true;
-		
-		sc = new Scanner(System.in);//erro al pasar por aqui mas de una vez
+
+		posicionX = 0;
+		posicionY = 0;
+		sc = new Scanner(System.in);
+
 		System.out.println("Dime la posicion x por favor de 0 a 4");
-		try {// Validamos si es un numero
+
+		if (sc.hasNextInt()) {
 			posicionX = sc.nextInt();
-		} catch (Exception e) {
-			error = false;// si no es un numero
+		} else {
+			System.out.println("DIME LA POSICION CORRECTA (X) ENTRE 0 y 4");
+			posicionX = 0;
+			sc.close();
+			
+			return false;
 		}
 
 		if (posicionX < 0 | posicionX > 5) {// si no es un numero o no esta entre 0 y 5
-			System.out.println("escribe la posicioncorrecta de 0 a 4");
-			
-			error = false;
+			System.out.println("escribe la posicion correcta de 0 a 4");
+			sc.close();
+			return false;
 		}
 
 		System.out.println("Dime la posicion y por favor 0 a 4");
-		try {
-			posicionY = sc.nextInt();
-			sc.close();
 
-		} catch (Exception e) {
-			error = false;
+		if (sc.hasNextInt()) {
+			posicionY = sc.nextInt();
+		} else {
+			System.out.println("DIME LA POSICION (Y) CORRECTA ENTRE 0 y 4");
+			posicionY = 0;
+			sc.close();
+			return false;
 		}
 
 		if (posicionY > 5 | posicionY < 0) {
-			System.out.println("escribe la posicioncorrecta de 0 a 4");
-			error = false;
-		}
-		//sc.remove();
-		sc.close();
-		
-		if (error == false) {
+			System.out.println("escribe la posicion correcta de 0 a 4");
+			sc.close();
+			
 			return false;
-		} else {
-			return true;
 		}
+
+		sc.close();
+		return true;
+	
 
 	}
 
