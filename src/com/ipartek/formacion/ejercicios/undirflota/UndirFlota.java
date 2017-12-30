@@ -8,6 +8,8 @@ public class UndirFlota {
 	static int intentos = 7;
 	static int posicionY = 0;
 	static int posicionX = 0;
+	static String SposicionY; 
+	static String SposicionX; 
 	static boolean error = true;
 	static Scanner sc;
 	public static void main(String[] args) {
@@ -66,7 +68,6 @@ public class UndirFlota {
 				break;
 			}
 		}
-		sc.remove();
 
 	}
 
@@ -74,17 +75,29 @@ public class UndirFlota {
 
 		posicionX = 0;
 		posicionY = 0;
+		
 		sc = new Scanner(System.in);
 
 		System.out.println("Dime la posicion x por favor de 0 a 4");
-
-		if (sc.hasNextInt()) {
+		
+		/*if (sc.) {
 			posicionX = sc.nextInt();
 		} else {
 			System.out.println("DIME LA POSICION CORRECTA (X) ENTRE 0 y 4");
 			posicionX = 0;
 			sc.close();
 			
+			return false;
+		}*/
+		
+		SposicionX=sc.nextLine();
+		
+		if(verificarInt(SposicionX)) {
+			posicionX=Integer.parseInt(SposicionX);
+		}else {
+			System.out.println("DIME LA POSICION CORRECTA (X) ENTRE 0 y 4");
+			posicionX = 0;
+			sc.close();
 			return false;
 		}
 
@@ -96,10 +109,19 @@ public class UndirFlota {
 
 		System.out.println("Dime la posicion y por favor 0 a 4");
 
-		if (sc.hasNextInt()) {
+		/*if (sc.hasNextInt()) {
 			posicionY = sc.nextInt();
 		} else {
 			System.out.println("DIME LA POSICION (Y) CORRECTA ENTRE 0 y 4");
+			posicionY = 0;
+			sc.close();
+			return false;
+		}*/
+		SposicionY=sc.nextLine();
+		if(verificarInt(SposicionY)) {
+			posicionY=Integer.parseInt(SposicionY);
+		}else {
+			System.out.println("DIME LA POSICION CORRECTA (Y) ENTRE 0 y 4");
 			posicionY = 0;
 			sc.close();
 			return false;
@@ -111,11 +133,24 @@ public class UndirFlota {
 			
 			return false;
 		}
-
+		
 		sc.close();
 		return true;
 	
 
+	}
+
+	private static boolean verificarInt(String s) {
+		
+		    try { 
+		        Integer.parseInt(s); 
+		    } catch(NumberFormatException e) { 
+		        return false; 
+		    } catch(NullPointerException e) {
+		        return false;
+		    }
+		    // only got here if we didn't return false
+		    return true;
 	}
 
 	/*
