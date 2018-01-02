@@ -4,11 +4,6 @@ public class Canario extends Ave {
 
 	public double tamano;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
 	public Canario(char sexo, int edad) {
 		super(sexo, edad);
 	}
@@ -18,7 +13,16 @@ public class Canario extends Ave {
 		this.tamano = tamano;
 	}
 
-	public void altura(float tamano) {
+	public double getTamano() {
+		return tamano;
+	}
+
+	public void setTamano(double tamano) {
+		this.tamano = tamano;
+	}
+
+	public void altura(double tamano) {
+		
 		if (tamano > 30) {
 			System.out.println("Alto");
 		} else if ((tamano > 15) & (tamano < 30)) {
@@ -27,6 +31,7 @@ public class Canario extends Ave {
 		} else {
 			System.out.println("Bajo");
 		}
+		
 	}
 
 }
