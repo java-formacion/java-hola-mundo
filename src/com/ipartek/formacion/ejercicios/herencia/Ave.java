@@ -8,6 +8,7 @@ public class Ave {
 	public Ave(String sexo, int edad) {
 		this.sexo = sexo;
 		this.edad = edad;
+		numAves++;
 		
 	}
 	
