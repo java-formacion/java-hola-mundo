@@ -6,6 +6,11 @@ public class canario extends ave {
 
 	public canario(char sexo, int edad) {
 		super(sexo, edad);
+
+	}
+
+	public canario(char sexo, int edad, int tamano) {
+		super(sexo, edad);
 		this.tamano = tamano;
 	}
 
