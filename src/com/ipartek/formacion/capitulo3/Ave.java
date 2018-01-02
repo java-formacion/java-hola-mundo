@@ -1,12 +1,15 @@
 package com.ipartek.formacion.capitulo3;
 
-public class Ave {
+public abstract class Ave {
 
 	
 	
-	String sexo;
-	int edad;
-	static int numeroAvesCreadas=0;
+	public String sexo;
+	public int edad;
+	public static int numeroAvesCreadas=0;
+	
+	public DatosPersonales nombres= new DatosPersonales(null, null);
+	
 	
 	
 	
@@ -18,17 +21,23 @@ public class Ave {
 		numeroAvesCreadas++;
 	}
 
-	static void numAvesCreadas() {
+	public static void numAvesCreadas() {
 		
 		System.out.println(numeroAvesCreadas);
 		
 	}
 	
-	 void quienSoy() {
+	public void quienSoy() {
 		 
 		 System.out.println(sexo+ " " + edad);
 		
 	}
+	
+	public abstract void cantar();
+		
+		
+		
+	
 	
 	
 }
