@@ -24,4 +24,6 @@ public class Loro extends Ave {
 			System.out.println("El loro es de " + region);
 		}
 	}
+	
+	
 }
