@@ -13,6 +13,56 @@ public class Loro extends Ave {
 		this.color = color;
 	}
 	
+	//Getters y Setters
+	
+	public String getSexo() {
+		return sexo;
+	}
+
+
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+
+
+	public int getEdad() {
+		return edad;
+	}
+
+
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+
+
+	public char getRegion() {
+		return region;
+	}
+
+
+
+	public void setRegion(char region) {
+		this.region = region;
+	}
+
+
+
+	public String getColor() {
+		return color;
+	}
+
+
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+
+
 	public void deDondeEres(char region) {
 		if(region == 'N') {
 			System.out.println("El loro es de " + region);

@@ -21,6 +21,36 @@ public class Canario extends Ave {
 		this.tamanio = tamanio;
 	}
 	
+	//Getters y Setters
+	
+	
+	
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public double getTamanio() {
+		return tamanio;
+	}
+
+	public void setTamanio(double tamanio) {
+		this.tamanio = tamanio;
+	}
+	
+	//metodo
+
 	public void altura(double tamanio) {
 		if(tamanio>30) {
 			System.out.println("Alto");
