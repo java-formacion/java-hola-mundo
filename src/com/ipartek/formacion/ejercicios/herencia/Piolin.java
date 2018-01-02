@@ -50,6 +50,14 @@ public class Piolin extends Canario {
 		
 		l.deDondeEres('N');
 		
+		p.setTamanio(1.20);
+		System.out.println("El tamaño modificado del piolin es " + p.getTamanio());
+		
+		l.setRegion('O');
+		System.out.println("La nueva region de loro es " + l.getRegion());
+		
+		System.out.println("El numero de aves creadas es " + numAves);
+		
 		
 	}
 

@@ -48,7 +48,12 @@ public class Ave {
 	
 	
 	public void quienSoy(String sexo) {
-		System.out.println("soy " + sexo);
+				
+		if (sexo == "H") {
+			System.out.println("soy HEMBRA");
+		}else {
+			System.out.println("soy MACHO");
+		}
 		
 	}
 

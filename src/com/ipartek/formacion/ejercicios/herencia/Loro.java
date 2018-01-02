@@ -65,13 +65,13 @@ public class Loro extends Ave {
 
 	public void deDondeEres(char region) {
 		if(region == 'N') {
-			System.out.println("El loro es de " + region);
+			System.out.println("El loro es de Norte");
 		}else if(region == 'S') {
-			System.out.println("El loro es de " + region);
+			System.out.println("El loro es de Sur");
 		}else if(region == 'E') {
-			System.out.println("El loro es de " + region);
+			System.out.println("El loro es de Este");
 		}else if(region == 'O') {
-			System.out.println("El loro es de " + region);
+			System.out.println("El loro es de Oeste");
 		}
 	}
 	
