@@ -10,5 +10,10 @@ public class Ave {
 		this.edad = edad;
 		
 	}
+	
+	public void quienSoy(String sexo) {
+		System.out.println("soy " + sexo);
+		
+	}
 
 }

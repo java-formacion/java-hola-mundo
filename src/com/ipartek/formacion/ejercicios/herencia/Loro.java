@@ -12,4 +12,16 @@ public class Loro extends Ave {
 		this.region = region;
 		this.color = color;
 	}
+	
+	public void deDondeEres(char region) {
+		if(region == 'N') {
+			System.out.println("El loro es de " + region);
+		}else if(region == 'S') {
+			System.out.println("El loro es de " + region);
+		}else if(region == 'E') {
+			System.out.println("El loro es de " + region);
+		}else if(region == 'O') {
+			System.out.println("El loro es de " + region);
+		}
+	}
 }
