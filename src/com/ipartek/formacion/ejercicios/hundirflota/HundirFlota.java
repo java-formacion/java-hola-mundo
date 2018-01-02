@@ -22,20 +22,19 @@ public class HundirFlota {
 		
 		fila =  (int) (Math.random()* 10);
 		col = (int) (Math.random()*10);
-		//dir = (int) (Math.random()*4)+1;
-		dir = 4;
+		dir = (int) (Math.random()*4)+1;
 		tam = (int) (Math.random()*4)+1;
 		crearBarco(fila, col, tam, dir);
 		
 		totalAciertos += tam;
 		
-//		fila =  (int) (Math.random()* 10);
-//		col = (int) (Math.random()*10);
-//		dir = (int) (Math.random()*4)+1;
-//		tam = (int) (Math.random()*3)+1;
-//		crearBarco(fila, col, tam, dir);
-//		
-//		totalAciertos += tam;
+		fila =  (int) (Math.random()* 10);
+		col = (int) (Math.random()*10);
+		dir = (int) (Math.random()*4)+1;
+		tam = (int) (Math.random()*3)+1;
+		crearBarco(fila, col, tam, dir);
+		
+		totalAciertos += tam;
 		
 		//mostrarTableroBarcos();
 		
