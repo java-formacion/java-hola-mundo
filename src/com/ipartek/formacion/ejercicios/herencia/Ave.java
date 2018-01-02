@@ -1,7 +1,14 @@
 package com.ipartek.formacion.ejercicios.herencia;
 
 public class Ave {
-	String sexo;
-	int edad;
+	public String sexo;
+	public int edad;
+	public static int numAves=0;
+	
+	public Ave(String sexo, int edad) {
+		this.sexo = sexo;
+		this.edad = edad;
+		
+	}
 
 }
