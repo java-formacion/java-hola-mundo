@@ -1,4 +1,4 @@
-package com.ipartek.formacion.herencia;
+package com.ipartek.formacion.herencia.ejercicio2;
 
 public class Canario extends Ave {
 
