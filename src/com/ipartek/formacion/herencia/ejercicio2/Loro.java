@@ -11,34 +11,25 @@ public class Loro extends Ave {
 		this.color = color;
 	}
 
-	public char getRegion() {
-		return region;
-	}
+	public void deDondeEres() {
 
-	public void setRegion(char region) {
-		this.region = region;
-	}
-
-	public String getColor() {
-		return color;
-	}
-
-	public void setColor(String color) {
-		this.color = color;
-	}
-
-	public void deDondeEres(char region) {
-
-		if (region == 'N') {
+		switch (this.region) {
+		case 'N':
 			System.out.println("Norte");
-		} else if (region == 'S') {
+			break;
+		case 'S':
 			System.out.println("Sur");
-		} else if (region == 'E') {
-			System.out.println("Este");
-		} else {
+			break;
+		case 'O':
 			System.out.println("Oeste");
+			break;
+		case 'E':
+			System.out.println("Este");
+			break;
+		default:
+			System.out.println("No has introducido una region valida");
 		}
-
+		
 	}
 
 }

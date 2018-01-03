@@ -42,16 +42,16 @@ public class Ave {
 
 	}
 
-//	public void cantar() {
-//
-//		if (this.getClass() == this.nombres.getAve()) {
-//			System.out.println("Pio-pio soy un Piolín");
-//		} else if (this.getClass() == Loro) {
-//			System.out.println("Piiio-piiiio loro bonito");
-//		} else {
-//			System.out.println("No sé lo que pio...");
-//		}
-//
-//	}
+	public void cantar() {
+
+		if (this.getClass() == Piolin.class) {
+			System.out.println("Pio-pio soy un Piolín");
+		} else if (this.getClass() == Loro.class) {
+			System.out.println("Piiio-piiiio loro bonito");
+		} else {
+			System.out.println("No sé lo que pio...");
+		}
+
+	}
 
 }

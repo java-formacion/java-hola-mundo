@@ -19,7 +19,7 @@ public class Piolin extends Canario {
 
 	public static void main(String[] args) {
 		
-		
+		Piolin[] jaula = new Piolin[3];
 		Piolin pio = new Piolin('M', 20, 16.5, 8);
 		
 		
