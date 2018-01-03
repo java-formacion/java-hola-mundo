@@ -26,15 +26,13 @@ public class HundirFlota {
 		tam = (int) (Math.random()*4)+1;
 		crearBarco(fila, col, tam, dir);
 		
-		totalAciertos += tam;
+//		fila =  (int) (Math.random()* 10);
+//		col = (int) (Math.random()*10);
+//		dir = (int) (Math.random()*4)+1;
+//		tam = (int) (Math.random()*3)+1;
+//		crearBarco(fila, col, tam, dir);
 		
-		fila =  (int) (Math.random()* 10);
-		col = (int) (Math.random()*10);
-		dir = (int) (Math.random()*4)+1;
-		tam = (int) (Math.random()*3)+1;
-		crearBarco(fila, col, tam, dir);
-		
-		totalAciertos += tam;
+//		System.out.println("Total aciertos para ganar: " + totalAciertos);
 		
 		//mostrarTableroBarcos();
 		
@@ -84,6 +82,8 @@ public class HundirFlota {
 					dirText = "Abajo";
 				break;
 			}
+			
+			totalAciertos += tam;
 			
 			System.out.println("Barco: " + fila + ", " + col + ", Tamaño: " + tam + ", Dir: " + dirText);
 			
@@ -159,23 +159,32 @@ public class HundirFlota {
 	
 	static void checkIntento() {
 		String[] coords = intento.split(",");
-		int x = Integer.parseInt(coords[0]);
-		int y = Integer.parseInt(coords[1]);
 		
-		System.out.println("\n");
-		
-		if(posBarcos[x][y] == "X") {
-			System.out.println("Tocado!");
-			tablero[x][y] = " X";
-			aciertos ++;
+		try {
+			
+			int x = Integer.parseInt(coords[0]);
+			int y = Integer.parseInt(coords[1]);
+			
+			System.out.println("\n");
+			
+			if(posBarcos[x][y] == "X") {
+				System.out.println("Tocado!");
+				tablero[x][y] = " X";
+				aciertos ++;
+			}
+			else {
+				System.out.println("Agua!");
+				tablero[x][y] = " A";
+			}
+			
+			intentos --;
+			mostrarTablero();
+			
+		} catch (Exception e) {
+			System.out.println("Oops! Has introducido una posición incorrecta. \n El formato debe ser X,Y");
+			jugar();
 		}
-		else {
-			System.out.println("Agua!");
-			tablero[x][y] = " A";
-		}
 		
-		intentos --;
-		mostrarTablero();
 	}
 	
 	static void checkGameState() {
