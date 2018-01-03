@@ -1,4 +1,4 @@
-package com.ipartek.formacion.ejercicios.atributosaparte;
+package com.ipartek.formacion.ejercicios.atributosaparte3;
 
 public class Piolin extends Canario {
 
@@ -28,7 +28,7 @@ public class Piolin extends Canario {
 		pio.tamano = 15;
 		pio.altura();
 		
-		lor.region = 'S';
+		lor.setRegion() = 'S';
 		lor.deDondeEres();
 		
 		
