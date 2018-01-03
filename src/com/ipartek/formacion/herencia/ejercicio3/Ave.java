@@ -2,14 +2,15 @@ package com.ipartek.formacion.herencia.ejercicio3;
 
 public class Ave {
 
-	public char sexo;
+	private char sexo;
 	public int edad;
-	static int numAves = 0;
-	static DatosPersonales nombres;
+	public static int numAves = 0;
+	public DatosPersonales nombres;
 
-	public Ave(char sexo, int edad) {
+	public Ave(char sexo, int edad, String nombreAve, String nombreDueno) {
 		this.sexo = sexo;
 		this.edad = edad;
+		this.nombres = new DatosPersonales(nombreAve, nombreDueno);
 		Ave.numAves++;
 	}
 
@@ -18,15 +19,13 @@ public class Ave {
 	}
 
 	public void setSexo(char sexo) {
-		this.sexo = sexo;
-	}
+		if ((sexo != 'M') && (sexo != 'H')) {
+			System.out.println("El sexo es erroneo se pondrá HEMBRA por defcto");
+			this.sexo = 'H';
+		} else {
+			this.sexo = sexo;
+		}
 
-	public int getEdad() {
-		return edad;
-	}
-
-	public void setEdad(int edad) {
-		this.edad = edad;
 	}
 
 	public void quienSoy() {
@@ -36,9 +35,9 @@ public class Ave {
 
 	}
 
-	public int avesCreadas() {
+	public static void getNumAvesCreadas() {
 
-		return numAves;
+		System.out.println("Se han creado: " + numAves + " aves");
 
 	}
 

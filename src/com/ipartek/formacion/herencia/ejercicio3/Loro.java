@@ -2,11 +2,11 @@ package com.ipartek.formacion.herencia.ejercicio3;
 
 public class Loro extends Ave {
 
-	public char region;
-	public String color;
+	private char region;
+	private String color;
 
-	public Loro(char sexo, int edad, char region, String color) {
-		super(sexo, edad);
+	public Loro(char sexo, int edad, String nombreAve, String nombreDueno, char region, String color) {
+		super(sexo, edad, nombreAve, nombreDueno);
 		this.region = region;
 		this.color = color;
 	}
@@ -16,7 +16,11 @@ public class Loro extends Ave {
 	}
 
 	public void setRegion(char region) {
-		this.region = region;
+		if ((region != 'N') && (region != 'S') && (region != 'E') && (region != 'O')) {
+			System.out.println("La region es incorrecta por defecto será NORTE");
+		} else {
+			this.region = region;
+		}
 	}
 
 	public String getColor() {
@@ -27,16 +31,23 @@ public class Loro extends Ave {
 		this.color = color;
 	}
 
-	public void deDondeEres(char region) {
+	public void deDondeEres() {
 
-		if (region == 'N') {
+		switch (this.region) {
+		case 'N':
 			System.out.println("Norte");
-		} else if (region == 'S') {
+			break;
+		case 'S':
 			System.out.println("Sur");
-		} else if (region == 'E') {
-			System.out.println("Este");
-		} else {
+			break;
+		case 'O':
 			System.out.println("Oeste");
+			break;
+		case 'E':
+			System.out.println("Este");
+			break;
+		default:
+			System.out.println("No has introducido una region valida");
 		}
 
 	}

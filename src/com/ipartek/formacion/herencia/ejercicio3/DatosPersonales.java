@@ -2,20 +2,20 @@ package com.ipartek.formacion.herencia.ejercicio3;
 
 public class DatosPersonales {
 
-	public String ave;
-	public String nombreDueno;
+	private String nombreAve;
+	private String nombreDueno;
 
-	public DatosPersonales(String ave, String nombreDueno) {
-		this.ave = ave;
+	public DatosPersonales(String nombreAve, String nombreDueno) {
+		this.nombreAve = nombreAve;
 		this.nombreDueno = nombreDueno;
 	}
 
-	public String getAve() {
-		return ave;
+	public String getNombreAve() {
+		return nombreAve;
 	}
 
-	public void setAve(String ave) {
-		this.ave = ave;
+	public void setNombreAve(String nombreAve) {
+		this.nombreAve = nombreAve;
 	}
 
 	public String getNombreDueno() {

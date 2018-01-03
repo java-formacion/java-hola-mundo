@@ -2,14 +2,14 @@ package com.ipartek.formacion.herencia.ejercicio3;
 
 public class Canario extends Ave {
 
-	public double tamano;
+	private int tamano;
 
-	public Canario(char sexo, int edad) {
-		super(sexo, edad);
+	public Canario(char sexo, int edad, String nombreAve, String nombreDueno) {
+		super(sexo, edad, nombreDueno, nombreDueno);
 	}
 
-	public Canario(char sexo, int edad, double tamano) {
-		super(sexo, edad);
+	public Canario(char sexo, int edad, String nombreAve, String nombreDueno, int tamano) {
+		super(sexo, edad, nombreDueno, nombreDueno);
 		this.tamano = tamano;
 	}
 
@@ -17,21 +17,21 @@ public class Canario extends Ave {
 		return tamano;
 	}
 
-	public void setTamano(double tamano) {
+	public void setTamano(int tamano) {
 		this.tamano = tamano;
 	}
 
-	public void altura(double tamano) {
-		
-		if (tamano > 30) {
+	public void getAltura() {
+
+		if (this.tamano > 30) {
 			System.out.println("Alto");
-		} else if ((tamano > 15) & (tamano < 30)) {
+		} else if ((this.tamano >= 15) && (this.tamano <= 30)) {
 			System.out.println("Mediano");
 
 		} else {
 			System.out.println("Bajo");
 		}
-		
+
 	}
 
 }
