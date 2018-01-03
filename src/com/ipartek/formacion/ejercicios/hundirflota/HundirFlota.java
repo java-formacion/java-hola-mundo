@@ -47,43 +47,60 @@ public class HundirFlota {
 	}
 	
 	static void crearBarco(int fila, int col, int tam, int dir) {
+		
 		String dirText = "";
 		
-		posBarcos[fila][col] = "X";
-		
-		switch(dir) {
-			case 1:
-				// Derecha
-				for(int i = (col + 1); i < (tam + col); i++) {
-					posBarcos[fila][i] = "X";
-				}
-				dirText = "Derecha";
-			break;
-			case 2:
-				// Izquierda
-				for(int i = (col - 1); i > (col - tam); i--) {
-					System.out.println(i);
-					posBarcos[fila][i] = "X";
-				}
-				dirText = "Izquierda";
-			break;
-			case 3:
-				// Arriba
-				for(int i = (fila - 1); i > (fila - tam); i--) {
-					posBarcos[i][col] = "X";
-				}
-				dirText = "Arriba";
-			break;
-			case 4:
-				// Abajo
-				for(int i = (fila + 1); i < (tam + fila); i++) {
-					posBarcos[i][col] = "X";
-				}
-				dirText = "Abajo";
-			break;
+		try {
+			
+			posBarcos[fila][col] = "X";
+			
+			switch(dir) {
+				case 1:
+					// Derecha
+					for(int i = (col + 1); i < (tam + col); i++) {
+						posBarcos[fila][i] = "X";
+					}
+					dirText = "Derecha";
+				break;
+				case 2:
+					// Izquierda
+					for(int i = (col - 1); i > (col - tam); i--) {
+						posBarcos[fila][i] = "X";
+					}
+					dirText = "Izquierda";
+				break;
+				case 3:
+					// Arriba
+					for(int i = (fila - 1); i > (fila - tam); i--) {
+						posBarcos[i][col] = "X";
+					}
+					dirText = "Arriba";
+				break;
+				case 4:
+					// Abajo
+					for(int i = (fila + 1); i < (tam + fila); i++) {
+						posBarcos[i][col] = "X";
+					}
+					dirText = "Abajo";
+				break;
+			}
+			
+			System.out.println("Barco: " + fila + ", " + col + ", Tamaño: " + tam + ", Dir: " + dirText);
+			
+		} catch (Exception e) {
+			
+			System.out.println("ERROR: fila " + fila + ", col " + col + ", Tamaño: " + tam + " Dir: " + dir);
+			System.out.println("\n");
+			
+			posBarcos[fila][col] = "";
+			
+			fila =  (int) (Math.random()* 10);
+			col = (int) (Math.random()*10);
+			dir = (int) (Math.random()*4)+1;
+			tam = (int) (Math.random()*3)+1;
+			crearBarco(fila, col, tam, dir);
+			
 		}
-		
-		System.out.println("Barco: " + fila + ", " + col + ", Tamaño: " + tam + ", Dir: " + dirText);
 		
 	}
 
