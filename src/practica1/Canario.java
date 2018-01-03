@@ -1,32 +1,32 @@
 package practica1;
 
 public class Canario extends Ave{
-	int tamaño;
+	int tamano;
 	
 	public Canario(char sexo, int edad) {
 		super(sexo, edad);
 	}
 
-	public Canario(char sexo, int edad, int tamaño) {
+	public Canario(char sexo, int edad, int tamano) {
 		super(sexo, edad);
-		this.tamaño = tamaño;
+		this.tamano = tamano;
 	}
 	
 	void mostrarAltura() {
-		if (tamaño>30) {
+		if (tamano>30) {
 			System.out.println("Alto");
-		}else if(tamaño>=15) {
+		}else if(tamano>=15) {
 			System.out.println("Mediano");
 		}else {
 			System.out.println("Bajo");
 		}
 	}
 
-	public int getTamaño() {
-		return tamaño;
+	public int getTamano() {
+		return tamano;
 	}
 
-	public void setTamaño(int tamaño) {
-		this.tamaño = tamaño;
+	public void setTamano(int tamano) {
+		this.tamano = tamano;
 	}
 }

@@ -3,8 +3,8 @@ package practica1;
 public class Piolin extends Canario{
 	int numeroPelis;
 
-	public Piolin(char sexo, int edad, int tamaño, int numeroPelis) {
-		super(sexo, edad, tamaño);
+	public Piolin(char sexo, int edad, int tamano, int numeroPelis) {
+		super(sexo, edad, tamano);
 		this.numeroPelis = numeroPelis;
 	}
 	
@@ -15,7 +15,7 @@ public class Piolin extends Canario{
 		loro.quienSoy();
 		piolin.mostrarAltura();
 		loro.deDondeEres();
-		piolin.setTamaño(20);
+		piolin.setTamano(20);
 		piolin.mostrarAltura();
 		loro.setRegion('e');
 		System.out.println("Numero de aves creadas: " +  numeroDeAves);

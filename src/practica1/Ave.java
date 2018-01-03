@@ -8,9 +8,9 @@ public class Ave {
 		super();		
 		this.sexo = sexo;
 		this.edad = edad;
-		Avescreadas();
+		avesCreadas();
 	}
-	static void Avescreadas(){
+	static void avesCreadas(){
 		numeroDeAves++;
 	}
 	void quienSoy(){
