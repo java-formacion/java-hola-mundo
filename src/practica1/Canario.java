@@ -1,7 +1,7 @@
 package practica1;
 
 public class Canario extends Ave{
-	int tamano;
+	private int tamano;
 	
 	public Canario(char sexo, int edad) {
 		super(sexo, edad);

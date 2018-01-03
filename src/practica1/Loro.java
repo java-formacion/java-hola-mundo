@@ -1,8 +1,8 @@
 package practica1;
 
 public class Loro extends Ave {
-	char region;
-	String color;
+	private char region;
+	private String color;
 
 	public Loro(char sexo, int edad, char region, String color) {
 		super(sexo, edad);
@@ -48,5 +48,6 @@ public class Loro extends Ave {
 	public void setColor(String color) {
 		this.color = color;
 	}
+
 
 }
