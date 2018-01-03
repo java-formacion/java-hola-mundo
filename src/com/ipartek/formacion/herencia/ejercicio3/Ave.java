@@ -1,6 +1,6 @@
 package com.ipartek.formacion.herencia.ejercicio3;
 
-public class Ave {
+public abstract class Ave {
 
 	private char sexo;
 	public int edad;
@@ -41,16 +41,6 @@ public class Ave {
 
 	}
 
-	public void cantar() {
-
-		if (this.getClass() == Piolin.class) {
-			System.out.println("Pio-pio soy un Piolín");
-		} else if (this.getClass() == Loro.class) {
-			System.out.println("Piiio-piiiio loro bonito");
-		} else {
-			System.out.println("No sé lo que pio...");
-		}
-
-	}
+	public abstract void cantar();
 
 }

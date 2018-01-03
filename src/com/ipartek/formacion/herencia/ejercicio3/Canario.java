@@ -34,4 +34,8 @@ public class Canario extends Ave {
 
 	}
 
+	public void cantar() {
+		// ????
+	}
+
 }

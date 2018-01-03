@@ -16,10 +16,16 @@ public class Piolin extends Canario {
 	public void setNumPelis(int numPelis) {
 		this.numPelis = numPelis;
 	}
+	
+	public void cantar() {
+
+		System.out.println("Pio-pio soy un Piolín");
+
+	}
 
 	public static void main(String[] args) {
 
-		Piolin[] jaula = new Piolin[3];
+		/*Piolin[] jaula = new Piolin[3];
 
 		Piolin pio1 = new Piolin('M', 5, 32, "dfgdf", "wrg", 20);
 		jaula[0] = pio1;
@@ -41,7 +47,7 @@ public class Piolin extends Canario {
 		pio3.cantar();
 
 		System.out.println(pio1.nombres.getNombreAve());
-		System.out.println(pio1.nombres.getNombreDueno());
+		System.out.println(pio1.nombres.getNombreDueno());*/
 
 	}
 
