@@ -24,11 +24,12 @@ public class Canario extends Ave {
 	public void altura(Piolin p) {
 		if (p.getTamano() > 30) {
 			System.out.println("Alto");
-		} else if (p.getTamano() < 30 && p.getTamano() > 15) {
+		} else if (p.getTamano() <= 30 && p.getTamano() > 15) {
 			System.out.println("Mediano");
-		} else if (p.getTamano() < 15) {
+		} else if (p.getTamano() <= 15) {
 			System.out.println("Pequeño");
 		}
+		
 	}
 
 }

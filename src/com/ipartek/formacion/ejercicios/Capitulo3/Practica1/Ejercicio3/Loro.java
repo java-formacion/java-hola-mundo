@@ -10,6 +10,10 @@ public class Loro extends Ave {
 	}
 
 	public void setRegion(char region) {
+		if(region!='n' && region != 's' && region != 'e' && region != 'o' ) {
+			System.out.println("La region es incorrecta por defecto se pondra N");
+			
+		}
 		this.region = region;
 	}
 
@@ -21,8 +25,10 @@ public class Loro extends Ave {
 		this.color = color;
 	}
 
-	public Loro(char sexo, int edad, char region, String color) {
-		super(sexo, edad);
+	
+
+	public Loro(char sexo, int edad, String nombreAve, String nombreDueno, char region, String color) {
+		super(sexo, edad, nombreAve, nombreDueno);
 		this.region = region;
 		this.color = color;
 	}
@@ -47,6 +53,12 @@ public class Loro extends Ave {
 			break;
 		}
 
+	}
+
+	@Override
+	public void cantar() {
+		System.out.println("Piiio-piiiio loro bonito");
+		
 	}
 
 }

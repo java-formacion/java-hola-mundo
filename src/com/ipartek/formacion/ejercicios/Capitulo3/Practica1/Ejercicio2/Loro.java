@@ -44,6 +44,7 @@ public class Loro extends Ave {
 			System.out.println("Oeste");
 			break;
 		default:
+			System.out.println("no has puesto bien el caracter de region");
 			break;
 		}
 

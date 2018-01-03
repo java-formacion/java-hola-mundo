@@ -1,56 +1,49 @@
 package com.ipartek.formacion.ejercicios.Capitulo3.Practica1.Ejercicio3;
-
-public class Ave {
+/**
+ * La clase Ave tendrá un nuevo atributo llamado nombres de la clase DatosPersonales.
+ * @author java
+ *
+ */
+public abstract class Ave {
 
 	private char sexo;
-	private int edad;
-	private static int avesCreadas = 0;
-	private String nombres;
-	DatosPersonales d= new DatosPersonales(nombres);
-
-	public Ave(char sexo, int edad) {
+	public int edad;
+	public static int avesCreadas = 0;
+	public DatosPersonales nombres;
+	
+	public DatosPersonales getNombres() {
+		return nombres;
+	}
+	public void setNombres(DatosPersonales nombres) {
+		this.nombres = nombres;
+	}
+	public Ave(char sexo, int edad, String nombreAve,String nombreDueno) {
 		this.sexo = sexo;
 		this.edad = edad;
+		this.nombres = new DatosPersonales(nombreAve, nombreDueno);
 		avesCreadas++;
 	}
-	public static void cantar(String tipoAve) {
-		if("piolin".equals(tipoAve)) {
-			System.out.println("Pio-pio soy un Piolín");
-		}else if("loro".equals(tipoAve)) {
-			System.out.println("Piiio-piiiio loro bonito");
-		}
-	}
+	public abstract void cantar();
 
 	public char getSexo() {
 		return sexo;
 	}
 
 	public void setSexo(char sexo) {
+		if(sexo!='m' && sexo!='h') {
+			System.out.println("El sexo es erroneo se pondra macho HEMBRA por defecto");
+			this.sexo='h';
+		}
 		this.sexo = sexo;
 	}
 
-	public int getEdad() {
-		return edad;
-	}
-
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-
-	public static int getAvesCreadas() {
-		return avesCreadas;
-	}
-
-	public static void setAvesCreadas(int avesCreadas) {
-		Ave.avesCreadas = avesCreadas;
-	}
-
+	
 	public void QuienSoy(Piolin p) {
-		System.out.println("Sexo: " + p.getSexo() + " edad: " + p.getEdad());
+		System.out.println("Sexo: " + p.getSexo() + " edad: " + edad);
 	}
 
 	public void QuienSoy(Loro l) {
-		System.out.println("Sexo: " + l.getSexo() + " edad: " + l.getEdad());
+		System.out.println("Sexo: " + l.getSexo() + " edad: " + edad);
 
 	}
 
