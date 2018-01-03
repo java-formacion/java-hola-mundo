@@ -4,19 +4,27 @@ public class Canario extends Ave {
 
 	// public char sexo;
 	// public int edad;
-	public double tamano;
+	protected double tamano;
 
-	public Canario(char sexo, int edad) {
+	public Canario(char sexo, int edad,String nombreAve, String nombreDueno) {
 
-		super(sexo, edad);
+		super(sexo, edad, nombreAve, nombreDueno);
 
 	}
 
-	public Canario(char sexo, int edad, double tamano) {
+	public Canario(char sexo, int edad, String nombreAve, String nombreDueno, double tamano) {
 
-		super(sexo, edad);
+		super(sexo, edad, nombreAve, nombreDueno);
 		this.tamano = tamano;
 
+	}
+	
+	public double getTamano() {
+		return tamano;
+	}
+	
+	public void setTamano (int tamano) {
+		this.tamano=tamano;
 	}
 
 	public void altura() {

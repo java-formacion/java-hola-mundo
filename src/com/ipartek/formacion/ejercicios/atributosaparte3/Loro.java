@@ -7,17 +7,28 @@ public class Loro extends Ave {
 	private char region;//asi evitamos otro valor diferente a NSEO
 	public String color;
 
-	public Loro(char sexo, int edad, char region, String color) {
+	public Loro(char sexo, int edad,String nombreAve, String nombreDueno, char region, String color) {
 
-		super(sexo, edad);
+		super(sexo, edad, nombreAve, nombreDueno);
 		this.region = region;
 		this.color = color;
 
 	}
 	
-	public void setRegion (char region) {
-		if (region!=)
+	public char getRegion() {
+		return region;
 	}
+	
+	public void setRegion (char region) {
+		if ((region!='N')&& (region!='S')&&(region!='E')&&(region!='O')) {
+			System.out.println("La region es incorrecta. Por defecto va a ser Norte");
+			this.region='N';
+		}else {
+			this.region=region;
+		}
+	}
+	
+	
 	
 	public void deDondeEres() {
 		System.out.println("Es del:");

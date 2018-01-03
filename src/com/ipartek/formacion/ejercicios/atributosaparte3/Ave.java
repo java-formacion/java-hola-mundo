@@ -13,7 +13,6 @@ public class Ave {
 
 		this.sexo = sexo;
 		this.edad = edad;
-		this.nombres.nombreAve(nombreAve);
 		this.nombres=new DatosPersonales(nombreDueno, nombreAve);
 		Ave.numAves++;
 
