@@ -24,8 +24,8 @@ public class Piolin extends Canario {
 	
 	public static void main(String[] args) {
 
-		Piolin pio = new Piolin('M', 9, 13, "Piolin", "Janai", 20);
-		Loro lor = new Loro('H', 30, "Green", "Patri", 'S', "Verde");
+		Piolin pio = new Piolin('M', 9, 20, "Piolin", "Janai", 20);
+		Loro lor = new Loro('H', 30, "Green", "Patri", 'N', "Verde");
 		
 		pio.quienSoy();
 		lor.quienSoy();
@@ -36,7 +36,7 @@ public class Piolin extends Canario {
 		pio.tamano = 15;
 		pio.altura();
 		
-		lor.setRegion = 'S';
+		lor.setRegion('S');
 		lor.deDondeEres();
 		
 		
