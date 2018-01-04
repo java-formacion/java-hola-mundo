@@ -29,7 +29,9 @@ public class Profesor extends Persona {
 
 	public void hablar() {
 
-		System.out.println("Soy un Profesor");
+		System.out.println("Soy un Profesor y sé hablar");
+		System.out.println("Nombre: " + this.getNombre() + "   " + "Edad: " + this.getEdad());
+		System.out.println("Despacho: " + this.getDespacho() + "   " + "Email: " + this.getEmail());
 
 	}
 

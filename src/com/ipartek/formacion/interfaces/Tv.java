@@ -29,7 +29,9 @@ public class Tv extends Aparato implements Hablador{
 
 	public void hablar() {
 
-		System.out.println("Soy una TV");
+		System.out.println("Soy una Tv y sé hablar");
+		System.out.println("Consumo: " + this.getConsumo() + "   " + "Precio: " + this.getPrecio());
+		System.out.println("Teletexto: " + this.isTeletexto() + "   " + "Antiguedad: " + this.getAntiguedad());
 
 	}
 

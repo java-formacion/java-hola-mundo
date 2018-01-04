@@ -29,7 +29,9 @@ public class Radio extends Aparato implements Hablador {
 
 	public void hablar() {
 
-		System.out.println("Soy una Radio");
+		System.out.println("Soy una Radio y sé hablar");
+		System.out.println("Consumo: " + this.getConsumo() + "   " + "Precio: " + this.getPrecio());
+		System.out.println("Casette: " + this.isCasette() + "   " + "Potencia: " + this.getPotencia());
 
 	}
 

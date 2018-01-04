@@ -29,7 +29,9 @@ public class Bedel extends Persona {
 
 	public void hablar() {
 
-		System.out.println("Soy un Bedel");
+		System.out.println("Soy un Bedel y sé hablar");
+		System.out.println("Nombre: " + this.getNombre() + "   " + "Edad: " + this.getEdad());
+		System.out.println("Turno: " + this.getTurno() + "   " + "Antiguedad: " + this.getAntiguedad());
 
 	}
 

@@ -3,9 +3,9 @@ package com.ipartek.formacion.interfaces;
 public class Alumno extends Persona {
 
 	private String carrera;
-	private String curso;
+	private int curso;
 
-	public Alumno(String nombre, int edad, String carrera, String curso) {
+	public Alumno(String nombre, int edad, String carrera, int curso) {
 		super(nombre, edad);
 		this.carrera = carrera;
 		this.curso = curso;
@@ -19,17 +19,19 @@ public class Alumno extends Persona {
 		this.carrera = carrera;
 	}
 
-	public String getCurso() {
+	public int getCurso() {
 		return curso;
 	}
 
-	public void setCurso(String curso) {
+	public void setCurso(int curso) {
 		this.curso = curso;
 	}
 
 	public void hablar() {
 
-		System.out.println("Soy un Alumno");
+		System.out.println("Soy un Alumno y sé hablar");
+		System.out.println("Nombre: " + this.getNombre() + "   " + "Edad: " + this.getEdad());
+		System.out.println("Carrera: " + this.getCarrera() + "   " + "Curso: " + this.getCurso());
 
 	}
 
