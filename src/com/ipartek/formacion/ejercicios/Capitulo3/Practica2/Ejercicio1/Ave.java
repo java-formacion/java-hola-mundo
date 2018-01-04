@@ -1,22 +1,22 @@
 package com.ipartek.formacion.ejercicios.Capitulo3.Practica2.Ejercicio1;
 
-public class Persona {
-	
-	private String nombre;
+public class Ave {
+
+	private char sexo;
 	private int edad;
 	
-	public Persona(String nombre, int edad) {
+	public Ave(char sexo, int edad) {
 		super();
-		this.nombre = nombre;
+		this.sexo = sexo;
 		this.edad = edad;
 	}
 
-	public String getNombre() {
-		return nombre;
+	public char getSexo() {
+		return sexo;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setSexo(char sexo) {
+		this.sexo = sexo;
 	}
 
 	public int getEdad() {
@@ -26,7 +26,6 @@ public class Persona {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-
 	
 	
 }
