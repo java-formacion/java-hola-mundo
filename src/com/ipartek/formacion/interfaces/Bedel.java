@@ -1,6 +1,6 @@
 package com.ipartek.formacion.interfaces;
 
-public class Bedel extends Persona {
+public class Bedel extends Persona implements Hablador {
 
 	private String turno;
 	private int antiguedad;

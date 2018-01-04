@@ -1,6 +1,6 @@
 package com.ipartek.formacion.interfaces;
 
-public abstract class Persona implements Hablador {
+public class Persona {
 
 	private String nombre;
 	private int edad;
@@ -25,7 +25,5 @@ public abstract class Persona implements Hablador {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-	
-	public abstract void hablar();
 
 }

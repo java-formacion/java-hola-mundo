@@ -6,9 +6,9 @@ public class Main {
 
 		Object[] variado = new Object[12];
 
-		Persona per1 = new Alumno("Hola", 42, "ADE", 5);
-		Ave av1 = new Loro('M', 12, 'O', "Rojo");
-		Aparato ap1 = new Tv(15561, 150, false, 1);
+		Persona per1 = new Persona("aa", 80);
+		Ave av1 = new Ave('M', 45);
+		Aparato ap1 = new Aparato(6544, 1561);
 
 		Buitre bui = new Buitre('H', 15, 100, 50);
 		Canario can = new Canario('M', 30, true);
@@ -35,7 +35,7 @@ public class Main {
 
 		for (int i = 0; i < variado.length; i++) {
 			if (variado[i] instanceof Hablador) {
-				((Hablador) variado[i]).hablar();
+				((Hablador) variado[i]).hablar(); //el cast es necesario porque Object no tiene hablar()
 				System.out.println();
 			}
 		}

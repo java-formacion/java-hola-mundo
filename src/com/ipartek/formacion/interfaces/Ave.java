@@ -1,6 +1,6 @@
 package com.ipartek.formacion.interfaces;
 
-public abstract class Ave {
+public class Ave {
 
 	private char sexo;
 	public int edad;

@@ -1,6 +1,6 @@
 package com.ipartek.formacion.interfaces;
 
-public abstract class Aparato {
+public class Aparato {
 
 	private int consumo;
 	private float precio;

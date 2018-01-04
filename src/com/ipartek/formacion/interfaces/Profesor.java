@@ -1,6 +1,6 @@
 package com.ipartek.formacion.interfaces;
 
-public class Profesor extends Persona {
+public class Profesor extends Persona implements Hablador {
 
 	private String despacho;
 	private String email;
