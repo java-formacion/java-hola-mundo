@@ -2,8 +2,7 @@ package com.ipartek.formacion.ejercicios.herencia;
 
 public class Loro extends Ave {
 	
-	String sexo;
-	int edad;
+	
 	char region;
 	String color;
 	
@@ -14,28 +13,6 @@ public class Loro extends Ave {
 	}
 	
 	//Getters y Setters
-	
-	public String getSexo() {
-		return sexo;
-	}
-
-
-
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
-	}
-
-
-
-	public int getEdad() {
-		return edad;
-	}
-
-
-
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
 
 
 
@@ -46,7 +23,12 @@ public class Loro extends Ave {
 
 
 	public void setRegion(char region) {
-		this.region = region;
+		if(region!='N' && region!='S' && region!='E' && region!='O') {
+			System.out.println("La region es incorrecta");
+		}else {
+			this.region = region;
+		}
+		
 	}
 
 
@@ -64,7 +46,7 @@ public class Loro extends Ave {
 
 
 	public void deDondeEres(char region) {
-		if(region == 'N') {
+		/*if(region == 'N') {
 			System.out.println("El loro es de Norte");
 		}else if(region == 'S') {
 			System.out.println("El loro es de Sur");
@@ -72,7 +54,30 @@ public class Loro extends Ave {
 			System.out.println("El loro es de Este");
 		}else if(region == 'O') {
 			System.out.println("El loro es de Oeste");
+		}*/
+		
+		switch(region) {
+		case 'N':
+			System.out.println("El loro es de Norte");
+			break;
+		case 'S':
+			System.out.println("El loro es de Sur");
+			break;
+		case 'E':
+			System.out.println("El loro es de Este");
+			break;
+		case 'O':
+			System.out.println("El loro es de Oeste");
+			break;
+			default:
+				System.out.println("Introduce una region");
 		}
+	}
+
+	@Override
+	protected void cantar() {
+		System.out.println("Piiio-piiiio loro bonito");
+		
 	}
 	
 	

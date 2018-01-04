@@ -1,9 +1,12 @@
 package com.ipartek.formacion.ejercicios.herencia;
 
-public class Ave {
-	public String sexo;
+
+
+public abstract class Ave {
+	private String sexo;
 	public int edad;
 	public static int numAves=0;
+	public DatosPersonales nombres;
 	
 	//constructor
 	public Ave(String sexo, int edad) {
@@ -11,6 +14,10 @@ public class Ave {
 		this.edad = edad;
 		numAves++;
 		
+	}
+	
+	public static void numeroAvesCreadas() {
+		System.out.println("Se han creado " + numAves + " aves");
 	}
 	
 	
@@ -21,7 +28,12 @@ public class Ave {
 
 
 	public void setSexo(String sexo) {
-		this.sexo = sexo;
+		if(sexo!="M" && sexo!="H") {
+			System.out.println("El sexo es erroneo");
+		}else {
+			this.sexo = sexo;
+		}
+		
 	}
 
 
@@ -54,10 +66,10 @@ public class Ave {
 		}else {
 			System.out.println("soy MACHO");
 		}
-		
+				
 	}
-
-
 	
+	//metodo abstracto
+	protected abstract void cantar();
 
 }

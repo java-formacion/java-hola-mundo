@@ -2,8 +2,6 @@ package com.ipartek.formacion.ejercicios.herencia;
 
 public class Piolin extends Canario {
 	
-	String sexo;
-	int edad;
 	int numPeliculas;
 	
 	public Piolin(String sexo, int edad, double tamanio, int numPeliculas) {
@@ -13,22 +11,6 @@ public class Piolin extends Canario {
 	
 	//Getters y Setters
 	
-	
-	public String getSexo() {
-		return sexo;
-	}
-
-	public void setSexo(String sexo) {
-		this.sexo = sexo;
-	}
-
-	public int getEdad() {
-		return edad;
-	}
-
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
 
 	public int getNumPeliculas() {
 		return numPeliculas;
@@ -53,10 +35,19 @@ public class Piolin extends Canario {
 		p.setTamanio(1.20);
 		System.out.println("El tamaño modificado del piolin es " + p.getTamanio());
 		
+		
+		l.getRegion();
 		l.setRegion('O');
-		System.out.println("La nueva region de loro es " + l.getRegion());
+		l.deDondeEres(l.getRegion());
 		
 		System.out.println("El numero de aves creadas es " + numAves);
+		
+		p.nombres.setNombreAve("Piolin");
+		p.nombres.setNombreDuenio("Rodolfo");
+		
+		Piolin[] piolin = new Piolin[3];
+		
+		
 		
 		
 	}
