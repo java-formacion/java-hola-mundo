@@ -3,11 +3,11 @@ package com.ipartek.formacion.capitulo3;
 public class Canario extends Ave{
 	
 	
-	public float tamaño;
+	public float tamano;
 
 	public Canario(String sexo, int edad, float tamaño) {
 		super(sexo, edad);
-		this.tamaño = tamaño;
+		this.tamano = tamaño;
 		
 		
 	}
@@ -20,10 +20,10 @@ public class Canario extends Ave{
 		
 	}
 	
-	public void calcularAltura(Canario c) {
+	public void calcularAltura() {
 		
-		if(c.tamaño >30) System.out.println("Alto");
-		else if(c.tamaño<=30 && c.tamaño>=15) System.out.println("Mediano");
+		if(tamano >30) System.out.println("Alto");
+		else if(tamano<=30 && tamano>=15) System.out.println("Mediano");
 		else System.out.println("Pequeño");
 	}
 	

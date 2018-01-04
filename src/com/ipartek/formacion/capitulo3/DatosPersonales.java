@@ -4,13 +4,13 @@ public class DatosPersonales {
 
 	
 	private String nombreAve;
-	private String nombreDueño;
+	private String nombreDueno;
 	
 	
 	public DatosPersonales(String nombreAve, String nombreDueño) {
 		super();
 		this.nombreAve = nombreAve;
-		this.nombreDueño = nombreDueño;
+		this.nombreDueno = nombreDueño;
 	}
 
 
@@ -24,13 +24,13 @@ public class DatosPersonales {
 	}
 
 
-	public String getNombreDueño() {
-		return nombreDueño;
+	public String getNombreDueno() {
+		return nombreDueno;
 	}
 
 
-	public void setNombreDueño(String nombreDueño) {
-		this.nombreDueño = nombreDueño;
+	public void setNombreDueno(String nombreDueño) {
+		this.nombreDueno = nombreDueño;
 	}
 	
 	

@@ -8,7 +8,7 @@ public abstract class Ave {
 	public int edad;
 	public static int numeroAvesCreadas=0;
 	
-	public DatosPersonales nombres= new DatosPersonales(null, null);
+	public DatosPersonales nombres = new DatosPersonales(null, null);
 	
 	
 	
