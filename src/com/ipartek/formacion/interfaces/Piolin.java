@@ -19,7 +19,9 @@ public class Piolin extends Canario implements Hablador {
 
 	public void hablar() {
 
-		System.out.println("Soy un Piolin");
+		System.out.println("Soy un Piolin y sé hablar");
+		System.out.println("Sexo: " + this.getSexo() + "   " + "Edad: " + this.getEdad());
+		System.out.println("Canta: " + this.isCanta() + "   " + "Peliculas: " + this.getNumPelis());
 
 	}
 

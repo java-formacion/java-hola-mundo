@@ -29,7 +29,9 @@ public class Loro extends Ave implements Hablador {
 
 	public void hablar() {
 
-		System.out.println("Soy un Loro");
+		System.out.println("Soy un Loro y sé hablar");
+		System.out.println("Sexo: " + this.getSexo() + "   " + "Edad: " + this.getEdad());
+		System.out.println("Region: " + this.getRegion() + "   " + "Color: " + this.getColor());
 
 	}
 

@@ -15,13 +15,15 @@ public abstract class Ave {
 	}
 
 	public void setSexo(char sexo) {
-		if ((sexo != 'M') && (sexo != 'H')) {
-			System.out.println("El sexo es erroneo se pondrá HEMBRA por defecto");
-			this.sexo = 'H';
-		} else {
-			this.sexo = sexo;
-		}
+		this.sexo = sexo;
+	}
 
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
 	}
 
 }
