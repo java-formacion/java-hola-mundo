@@ -1,6 +1,6 @@
 package com.ipartek.formacion.repaso;
 
-public class Juego {
+public abstract class Juego {
 
 	private int numVidas;
 	private int vidasIniciales;
@@ -45,5 +45,7 @@ public class Juego {
 			System.out.println("Nuevo record alcanzado!!!. El record es de " + recordVidas + " vidas");
 		}
 	}
+	
+	public abstract void juega();
 
 }
