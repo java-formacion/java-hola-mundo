@@ -39,6 +39,8 @@ public class Saludo {
 
 		// Mostrar por la consola
 		System.out.println("Idioma " + opcionMenu + " " + nombre + " " + apellido);
+		
+		sc.close();
 
 	}
 

@@ -36,9 +36,9 @@ public class App {
 		objs[10] = tv;
 		objs[11] = radio;
 		
-		for (Object object : objs) {
-			if(object instanceof Hablador) {
-				((Hablador) object).hablar();
+		for (Object arr : objs) {
+			if(arr instanceof Hablador) {
+				((Hablador) arr).hablar();
 			}
 		}
 

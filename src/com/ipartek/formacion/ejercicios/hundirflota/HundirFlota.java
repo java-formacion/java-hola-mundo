@@ -9,6 +9,8 @@ public class HundirFlota {
 	static int intentos, fila, col, dir, tam, aciertos, totalAciertos;
 	static String intento;
 	static boolean terminado;
+	
+	static Scanner sc = new Scanner(System.in);
 
 	static void nuevaPartida() {
 		
@@ -38,6 +40,8 @@ public class HundirFlota {
 		
 		// Crear el tablero
 		crearTablero();
+		
+		mostrarTablero();
 		
 		// Empezar partida
 		jugar();
@@ -145,16 +149,13 @@ public class HundirFlota {
 	}
 	
 	static void jugar() {
-		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("\nIntroduce una posición: ");
+		System.out.println("\nIntroduce una posición (X, Y): ");
 		intento = sc.nextLine();
 		
 		checkIntento();
 		
 		checkGameState();
-		
-		sc.close();
 	}
 	
 	static void checkIntento() {
@@ -162,8 +163,8 @@ public class HundirFlota {
 		
 		try {
 			
-			int x = Integer.parseInt(coords[0]);
-			int y = Integer.parseInt(coords[1]);
+			int x = Integer.parseInt(coords[0].trim());
+			int y = Integer.parseInt(coords[1].trim());
 			
 			System.out.println("\n");
 			
@@ -202,9 +203,9 @@ public class HundirFlota {
 		}
 		
 		if(terminado) {
-			Scanner sc = new Scanner(System.in);
 			
 			System.out.println("\nJugar otra vez S/N: ");
+			
 			String res = sc.nextLine();
 			
 			if(res.equalsIgnoreCase("S")) {
@@ -212,9 +213,9 @@ public class HundirFlota {
 			}
 			else {
 				System.out.println("Una pena... hasta otra!");
+				sc.close();
 			}
 			
-			sc.close();
 		}
 	}
 
