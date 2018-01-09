@@ -79,6 +79,8 @@ public class Alumnos {
 
 		listarVisionAlumno();
 
+		System.out.println("Limpiar consola");
+
 		/*
 		 * System.out.println("Numero de Alumnos = " + numeroAlumnos());
 		 * System.out.println("-------------------------------------------"); listar();
