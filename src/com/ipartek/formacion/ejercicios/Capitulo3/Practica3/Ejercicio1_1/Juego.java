@@ -1,4 +1,4 @@
-package com.ipartek.formacion.ejercicios.Capitulo3.Practica3.Ejercicio11;
+package com.ipartek.formacion.ejercicios.Capitulo3.Practica3.Ejercicio1_1;
 
 public class Juego {
 

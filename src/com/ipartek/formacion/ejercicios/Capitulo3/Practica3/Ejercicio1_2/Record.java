@@ -1,4 +1,4 @@
-package com.ipartek.formacion.ejercicios.Capitulo3.Practica3.Ejercicio12;
+package com.ipartek.formacion.ejercicios.Capitulo3.Practica3.Ejercicio1_2;
 
 public class Record {
 	private int record;

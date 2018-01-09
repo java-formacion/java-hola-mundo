@@ -1,4 +1,4 @@
-package com.ipartek.formacion.ejercicios.Capitulo3.Practica3.Ejercicio12;
+package com.ipartek.formacion.ejercicios.Capitulo3.Practica3.Ejercicio1_2;
 
 public class Juego {
 
@@ -53,19 +53,22 @@ public class Juego {
 		
 	}
 
-	public void reiniciarVidas(Juego j) {
-		j.numVidas = j.gNumVidas;
+	public void reiniciarVidas() {
+		numVidas = gNumVidas;
 	}
 
-	public void main(String[] args) {
-		Record r = new Record(0);
-		Juego j = new Juego(5, 5, r);
 
-		if (!j.QuitarVida()) {
-			System.out.println("Juego terminado!!");
+	public void actualizarRecord() {
+		
+		if (numVidas>r.getRecord()) {
+			System.out.println("Has superado el record!!!");
+		}else{
+			System.out.println("No has superado el record!!!");
 		}
-		reiniciarVidas(j);
+		
 	}
+
+	
 	
 	
 	
