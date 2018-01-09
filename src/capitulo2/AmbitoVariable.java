@@ -14,6 +14,7 @@ public class AmbitoVariable {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		@SuppressWarnings("unused")
 		int variableMetodo = 12; //accesible solo dentro de este metodo
 		
 		if (true) {

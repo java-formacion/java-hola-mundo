@@ -19,6 +19,54 @@ public abstract class Juego {
 	
 
 
+	public int getVidas() {
+		return vidas;
+	}
+
+
+
+
+
+	public void setVidas(int vidas) {
+		this.vidas = vidas;
+	}
+
+
+
+
+
+	public int getVidasIniciales() {
+		return vidasIniciales;
+	}
+
+
+
+
+
+	public void setVidasIniciales(int vidasIniciales) {
+		this.vidasIniciales = vidasIniciales;
+	}
+
+
+
+
+
+	public int getRecord() {
+		return record;
+	}
+
+
+
+
+
+	public void setRecord(int record) {
+		this.record = record;
+	}
+
+
+
+
+
 	public void mostrarVidasRestantes() {
 		
 		

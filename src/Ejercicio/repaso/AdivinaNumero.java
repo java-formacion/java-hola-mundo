@@ -16,7 +16,7 @@ public class AdivinaNumero extends Juego{
 		
 		reiniciarPartida();
 		
-		while( vidas >0) {
+		while( getVidas() >0) {
 		Scanner snum = new Scanner(System.in);
 		System.out.println("Dime un numero (entre 0 y 10), por favor");
 		int num = snum.nextInt();
