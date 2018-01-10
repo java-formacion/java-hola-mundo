@@ -18,16 +18,16 @@ public class VariablesPrimitivas {
 	public static void main(String[] args) {
 		
 	System.out.println("variable numerica entera \"int\" tiene un rango ("+ Integer.MIN_VALUE +",5)");
-	int numeroAlumnos = 15;
+	//	int numeroAlumnos = 15;
 	
 	System.out.println("variable float");
-	float dineroEnBlanco = (float) 789.53;
+	//	float dineroEnBlanco = (float) 789.53;
 	
 	System.out.println("variable char");
-	char sexo = 'h'; // h hombre, m mujer, i ndeterminado
+	//	char sexo = 'h'; // h hombre, m mujer, i ndeterminado
 	
 	System.out.println("variable boolean");
-	boolean mayorEdad = true;
+	//	boolean mayorEdad = true;
 	
 	
 	
