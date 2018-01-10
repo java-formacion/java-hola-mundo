@@ -2,9 +2,7 @@ package com.ipartek.formacion.ejercicios.estructuracondicional;
 import java.io.*;
 
 /**
- * 
- * @author java
- *
+ * Programa que lea dos caracteres y compruebe si son iguales.
  */
 
 public class Ejercicio_005 {

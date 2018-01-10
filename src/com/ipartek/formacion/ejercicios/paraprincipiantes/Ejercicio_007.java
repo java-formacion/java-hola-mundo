@@ -1,6 +1,6 @@
 package com.ipartek.formacion.ejercicios.paraprincipiantes;
 
-/*
+/**
  * Escribe un programa java que declare una variable C de tipo 
  * entero y asígnale un valor. A continuación muestra un mensaje 
  * indicando si el valor de C es positivo o negativo, si es par o 
@@ -9,6 +9,7 @@ package com.ipartek.formacion.ejercicios.paraprincipiantes;
  * condicional ( ? : ) dentro del println para resolverlo.
  * 
  */
+
 public class Ejercicio_007 {
 
 	public static void main(String[] args) {

@@ -1,6 +1,6 @@
 package com.ipartek.formacion.ejercicios.paraprincipiantes;
 
-/*
+/**
  * 	Programa java que declare cuatro variables enteras A, B, C y D
  *  y asígnale un valor a cada una. A continuación realiza las 
  * 	instrucciones necesarias para que:
@@ -10,6 +10,7 @@ package com.ipartek.formacion.ejercicios.paraprincipiantes;
  *		A tome el valor de D
  *		D tome el valor de B
  */
+
 public class Ejercicio_004 {
 	
 	public static void main(String[] args) {

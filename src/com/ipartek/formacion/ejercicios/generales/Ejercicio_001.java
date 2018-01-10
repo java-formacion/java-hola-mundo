@@ -1,7 +1,7 @@
 package com.ipartek.formacion.ejercicios.generales;
 import java.util.*;
 
-/* 
+/**
  * Programa que lea dos variables 
  * numéricas A y B e 
  * intercambie sus contenidos. 
