@@ -1,7 +1,5 @@
 package com.ipartek.formacion.helloworld;
 
-import org.omg.Messaging.SyncScopeHelper;
-
 /**
  * Ejercicio para aprender el ambito de las variables
  * Pueden ser de CLASE, METODO o BLOQUE DE CODIGO.
