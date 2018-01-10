@@ -1,4 +1,4 @@
-package buclesanidados;
+package com.ipartek.formacion.buclesanidados;
 
 /**
  * 
